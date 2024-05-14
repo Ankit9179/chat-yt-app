@@ -50,11 +50,11 @@ export const sendMessage = async (req, res) => {
 export const getMessage = async (req, res) => {
   try {
     const { id: userToChat } = req.params;
-    const senderId = req.user._id;
+    const senderId = req.user._id; //loggedin user
 
     const conversation = await Conversation.findOne({
       participants: { $all: [senderId, userToChat] },
-    }).populate("messages"); //net refrence but actually message
+    }).populate("messages"); //not refrence but actually message
 
     if (!conversation) {
       return res.status(200).json([]);
