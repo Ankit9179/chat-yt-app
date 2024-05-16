@@ -2,7 +2,7 @@ import React from "react";
 
 const GenderCheckBox = () => {
     return (
-        <div className="flex">
+        <div className="flex gap-4">
             {" "}
             <div className="form-control">
                 {" "}
