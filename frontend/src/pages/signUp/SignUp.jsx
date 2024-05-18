@@ -14,7 +14,7 @@ const SignUp = () => {
         gender: ""
     })
 
-    //getting from hook
+    //getting from hook signup is a function, loading is a state
     const { signup, loading } = useSignup()
 
     //gender change fun , it will be called from gendercheckbox.jsx component
@@ -53,17 +53,17 @@ const SignUp = () => {
                         </label>
                         <input type="password" value={inputs.password} onChange={(e) => setInputes({ ...inputs, password: e.target.value })} className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
-                    <GenderCheckBox changeGenderFunction={changeGenderFunction} selectedGender={inputs.gender} />
                     <div className='my-2'>
                         <label className='lable p-2'>
                             <span className='text-base lable-text text-1xl font-semibold'>Confirm Password</span>
                         </label>
                         <input type="password" value={inputs.confirmpassword} onChange={(e) => setInputes({ ...inputs, confirmpassword: e.target.value })} className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
-                    <Link to={'/login'} className='hover:text-blue-400 pt-3 text-1xl'>Already have an account ?</Link>
+                    <GenderCheckBox changeGenderFunction={changeGenderFunction} selectedGender={inputs.gender} />
                     <div className='button my-2'>
                         <button type="submit" className='w-full h-10 px-2 bg-gray-950 text-white rounded-xl hover:bg-white hover:text-black'>Sign Up</button>
                     </div>
+                    <Link to={'/login'} className='hover:text-blue-400 pt-3 text-1xl'>Already have an account ?</Link>
                 </form>
             </div>
         </div>
