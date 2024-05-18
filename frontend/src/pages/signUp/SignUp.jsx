@@ -60,8 +60,14 @@ const SignUp = () => {
                         <input type="password" value={inputs.confirmpassword} onChange={(e) => setInputes({ ...inputs, confirmpassword: e.target.value })} className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
                     <GenderCheckBox changeGenderFunction={changeGenderFunction} selectedGender={inputs.gender} />
-                    <div className='button my-2'>
-                        <button type="submit" className='w-full h-10 px-2 bg-gray-950 text-white rounded-xl hover:bg-white hover:text-black'>Sign Up</button>
+                    <div className='button my-2 text-center'>
+                        {
+                            !loading ? (
+                                <button type="submit" className='w-full h-10 px-2 bg-gray-950 text-white rounded-xl hover:bg-white hover:text-black'>Sign Up</button>
+                            ) : (
+                                <span className="loading loading-dots loading-lg"></span>
+                            )
+                        }
                     </div>
                     <Link to={'/login'} className='hover:text-blue-400 pt-3 text-1xl'>Already have an account ?</Link>
                 </form>

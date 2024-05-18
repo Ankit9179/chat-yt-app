@@ -21,10 +21,10 @@ const Login = () => {
                         </label>
                         <input type="password" className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
-                    <Link to={'/signup'} className='hover:text-blue-400 pt-3 text-1xl'>Don't have any account ?</Link>
                     <div className='button my-2'>
                         <button type="button" className='w-full h-10 px-2 bg-gray-950 text-white rounded-xl hover:bg-white hover:text-black'>login</button>
                     </div>
+                    <Link to={'/signup'} className='hover:text-blue-400 pt-3 text-1xl'>Don't have any account ?</Link>
                 </form>
             </div>
         </div>
