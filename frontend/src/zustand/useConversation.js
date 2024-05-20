@@ -6,7 +6,7 @@ const useConversationStore = create((set) => ({
     set({ selectedConversation }), //setter function
   //
   messages: [], // global state
-  setMessages: () => set({ messages }), // setter function
+  setMessages: (messages) => set({ messages }), // setter function
 }));
 
 //when you use default then ,can import with any name without {}curly braces
