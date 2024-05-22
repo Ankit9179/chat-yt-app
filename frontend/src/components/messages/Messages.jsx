@@ -6,13 +6,12 @@ import MessagesSkeleton from '../skeleton/MessagesSkeleton.jsx';
 const Messages = () => {
     const { loading, messages } = useGetMessages();
 
-    const lastMessage = useRef() //it could be null
-
+    const lastMessage = useRef() //it could be null  this code for auto scroll in  messages
     useEffect(() => {
         setTimeout(() => {
             lastMessage.current?.scrollIntoView({ vehavior: "smooth" })
         }, 100);
-    }, [messages])
+    }, [messages])//
 
     return (
         <div className='px-4 flex-1 overflow-y-auto'>
