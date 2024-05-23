@@ -2,9 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import Message from '../messages/Message.jsx'
 import useGetMessages from '../../hooks/useGetMessages.js';
 import MessagesSkeleton from '../skeleton/MessagesSkeleton.jsx';
+import useGetMessage from '../../hooks/useGetMessage.js';
 
 const Messages = () => {
     const { loading, messages } = useGetMessages();
+
+    //call 
+    useGetMessage()
 
     const lastMessage = useRef() //it could be null  this code for auto scroll in  messages
     useEffect(() => {

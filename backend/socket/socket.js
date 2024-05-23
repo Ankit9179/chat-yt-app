@@ -11,6 +11,11 @@ const io = new Server(server, {
   },
 }); //io server which wrap express server
 
+//for sending realtime message //add receiver id in userSocketMapm
+export const getReceiverId = (receiverId) => {
+  return userSocketMap[receiverId];
+};
+
 const userSocketMap = {}; // {userId:socketId} , it will store ids of loggedin user
 
 //connection io
