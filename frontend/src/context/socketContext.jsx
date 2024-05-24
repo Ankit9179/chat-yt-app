@@ -19,7 +19,7 @@ export const SocketContextProvider = ({ children }) => {
     //socket io connection 
     useEffect(() => {
         if (authUser) {
-            const socket = io("http://localhost:5000", {
+            const socket = io("https://caht-app-ld.onrender.com/", {
                 query: {
                     userId: authUser._id
                 }
