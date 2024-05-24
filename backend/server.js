@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
@@ -12,6 +13,9 @@ import mongoDbConnections from "./db/connectToDatabase.js";
 const port = process.env.PORT || 5000;
 
 dotenv.config();
+
+const __dirname = path.resolve(); // it will gives acctual path of root dir name.
+
 app.use(express.json()); // for parse the incommig request with json payload (from request.body)
 app.use(cookieParser()); //it will be use brfore run all routes
 
@@ -19,6 +23,12 @@ app.use(cookieParser()); //it will be use brfore run all routes
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", usersRoutes);
+
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
 // app.get("/", (req, res) => {
 //   //root rout
