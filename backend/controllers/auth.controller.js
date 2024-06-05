@@ -70,7 +70,7 @@ export const loginUser = async (req, res) => {
       return res.status(400).json({ error: "Invalid username and password" });
     }
     //generate and send token in cookie
-    genetateTokenAndSetCookie(user.id, res);
+    genetateTokenAndSetCookie(user._id, res);
 
     res.status(200).json({
       _id: user._id,
