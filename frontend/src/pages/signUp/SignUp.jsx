@@ -37,13 +37,13 @@ const SignUp = () => {
                 <form onSubmit={handelInputs}>
                     <div className='my-2'>
                         <label className='lable p-2'>
-                            <span className='text-base lable-text text-1xl font-semibold'>Full Name</span>
+                            <span className='text-base lable-text text-1xl font-semibold'>User Name</span>
                         </label>
                         <input type="text" value={inputs.fullName} onChange={(e) => setInputes({ ...inputs, fullName: e.target.value })} className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
                     <div className='my-2'>
                         <label className='lable p-2'>
-                            <span className='text-base lable-text text-1xl font-semibold'>User Name</span>
+                            <span className='text-base lable-text text-1xl font-semibold'>Full Name</span>
                         </label>
                         <input type="text" value={inputs.userName} onChange={(e) => setInputes({ ...inputs, userName: e.target.value })} className='w-full h-10 px-2 bg-gray-400 text-white rounded-xl' />
                     </div>
