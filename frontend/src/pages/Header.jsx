@@ -10,7 +10,7 @@ const Header = () => {
                 <nav>
                     <ul className="flex space-x-1">
                         <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2" onClick={() => navigate('/jokes')}>Jokes</a></li>
-                        <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">Meems</a></li>
+                        <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">Vlogs</a></li>
                         <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">News</a></li>
                         <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2" onClick={() => navigate('/chats-with-friends')}>Chats</a></li>
                     </ul>
