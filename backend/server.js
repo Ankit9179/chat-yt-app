@@ -12,7 +12,7 @@ import vlogRoutes from "./routes/vlog.routes.js";
 import { app, server } from "./socket/socket.js";
 app.use(
   cors({
-    origin: "http://localhost:3000", // specify the frontend origin
+    origin: "https://caht-app-ld.onrender.com", // specify the frontend origin
     credentials: true, // allow cookies or other credentials
   })
 );
