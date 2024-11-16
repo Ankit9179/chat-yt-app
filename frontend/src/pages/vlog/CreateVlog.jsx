@@ -47,7 +47,7 @@ const ImageUploader = () => {
                 setUploadStatus('Image uploaded to Cloudinary. Now uploading to server...');
 
                 // Step 2: Send image URL along with title and body to the backend
-                const response = await axios.post('http://localhost:5000/api/vlog/create-vlog', {
+                const response = await axios.post('https://caht-app-ld.onrender.com/api/vlog/create-vlog', {
                     title,
                     body,
                     imageUrl: cloudinaryData.secure_url,
