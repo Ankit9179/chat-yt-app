@@ -6,7 +6,9 @@ const protectRoute = async (req, res, next) => {
   try {
     const token = req.cookies.jwt; //we can't  get cookie without cookie parser
     if (!token) {
-      return res.status(401).json({ error: "Unautorized | No Token Provided" });
+      return res
+        .status(401)
+        .json({ error: "Unautorized | No Token Providedddddd" });
     }
     //verify token
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY); //it will return id which is stored in token by name userId

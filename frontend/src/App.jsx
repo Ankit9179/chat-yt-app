@@ -38,6 +38,8 @@ import SignUp from "./pages/signUp/SignUp.jsx";
 import Home from "./pages/home/Home.jsx";
 import Hero from "./components/heroSections/Hero.jsx";
 import Jokes from "./pages/Jokes.jsx";
+import CreateVlog from "./pages/vlog/CreateVlog.jsx";
+import AllVlogs from "./pages/vlog/AllVlogs.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -51,6 +53,8 @@ function App() {
           <Route path="chats-with-friends" element={authUser ? <Home /> : <Navigate to="/login" />} />
           <Route path="/login" element={authUser ? <Navigate to="/" /> : <Login />} />
           <Route path="/signup" element={authUser ? <Navigate to="/" /> : <SignUp />} />
+          <Route path="/vlogs" element={<AllVlogs />} />
+          <Route path="/vlog/create" element={<CreateVlog />} />
           <Route path="/jokes" element={<Jokes />} />
         </Routes>
       </main>
