@@ -61,7 +61,7 @@ const ImageUploader = () => {
                 console.error('Error uploading to Cloudinary:', cloudinaryData.error);
             }
         } catch (error) {
-            setUploadStatus('Error uploading image.');
+            setUploadStatus(error.response.data.error);
             console.error('Error:', error);
         }
     };
