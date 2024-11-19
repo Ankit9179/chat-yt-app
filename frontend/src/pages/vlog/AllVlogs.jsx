@@ -8,7 +8,7 @@ const AllVlogs = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/vlog/get-all-Vlogs') // Replace with your API endpoint
+        fetch('https://caht-app-ld.onrender.com/api/vlog/get-all-Vlogs') // Replace with your API endpoint
             .then(response => response.json())
             .then(data => {
                 setVlogs(data);
