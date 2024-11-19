@@ -8,7 +8,7 @@ const AllVlogs = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://caht-app-ld.onrender.com/api/vlog/get-all-Vlogs') // Replace with your API endpoint
+        fetch('http://localhost:5000/api/vlog/get-all-Vlogs') // Replace with your API endpoint
             .then(response => response.json())
             .then(data => {
                 setVlogs(data);
@@ -32,8 +32,19 @@ const AllVlogs = () => {
     return (
         <div className="p-6 w-[100%]">
             <h1 className="text-3xl font-bold text-center  mb-8 text-white">Vlogs</h1>
+            <div className="flex justify-end sm:justify-end">
+                <button
+                    type="button"
+                    onClick={() => navigate('/vlog/create')}
+                    className="bg-white text-black hover:bg-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 mb-5 font-bold me-2 
+    sm:me-0 sm:mb-4 
+    dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                >
+                    CREATE POST
+                </button>
+            </div>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <button type="button" onClick={() => navigate('/vlog/create')} class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">create</button>
 
                 {vlogs.map((vlog, index) => (
                     <div
