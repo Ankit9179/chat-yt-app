@@ -3,7 +3,7 @@ import smock from './smock 2.jpg'
 
 const Hero = () => {
     return (
-        <div className='flex flex-col gap-12'>
+        <div className='flex flex-col gap-[2px]'>
 
             <section className="bg-gray-900 text-white py-20">
                 <div className="container mx-auto flex flex-col items-center text-center">
@@ -87,7 +87,7 @@ const Hero = () => {
                             <h3 className="mt-4 font-bold">- Shruti Kumari</h3>
                         </div>
                         <div className="p-6 bg-blue-400 rounded">
-                            <p className="italic">"Wowooo this is great platform and chat feature is so awwsome"</p>
+                            <p className="italic">"Wowooo this is great platform and chat feature is so awesome"</p>
                             <h3 className="mt-4 font-bold">- Sakshi Sharma</h3>
                         </div>
                     </div>
