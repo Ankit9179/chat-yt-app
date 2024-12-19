@@ -80,15 +80,15 @@ const Hero = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="p-6 bg-blue-400 rounded">
                             <p className="italic">"This website changed the way I learn and grow. Highly recommended!"</p>
-                            <h3 className="mt-4 font-bold">- Adarsh Gupta</h3>
+                            <h3 className="mt-4 font-bold">- Anil Gupta</h3>
                         </div>
                         <div className="p-6 bg-blue-400 rounded">
                             <p className="italic">"The community here is amazing. I always find great discussions and resources."</p>
-                            <h3 className="mt-4 font-bold">- Shruti Kumari</h3>
+                            <h3 className="mt-4 font-bold">- Pooja Kumari</h3>
                         </div>
                         <div className="p-6 bg-blue-400 rounded">
                             <p className="italic">"Wowooo this is great platform and chat feature is so awesome"</p>
-                            <h3 className="mt-4 font-bold">- Sakshi Sharma</h3>
+                            <h3 className="mt-4 font-bold">- Sonali Sharma</h3>
                         </div>
                     </div>
                 </div>
