@@ -14,7 +14,8 @@ const Header = () => {
                         <li><Link to="/vlogs" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2" >Vlogs</Link></li>
                         <li><Link to="/chats-with-friends" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">Chats</Link></li>
                         <li><Link to="/jokes" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">Jokes</Link></li>
-                        <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">News</a></li>
+                        <li><Link to="/news" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">News</Link></li>
+                        {/* <li><a href="#" className="hover:text-gray-300 hover:bg-slate-600 rounded-md p-2">News</a></li> */}
                     </ul>
                 </nav>
             </div>

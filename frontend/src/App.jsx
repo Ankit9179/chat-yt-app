@@ -40,6 +40,7 @@ import Hero from "./components/heroSections/Hero.jsx";
 import Jokes from "./pages/Jokes.jsx";
 import CreateVlog from "./pages/vlog/CreateVlog.jsx";
 import AllVlogs from "./pages/vlog/AllVlogs.jsx";
+import NewsPage from "./pages/news/NewsPage.jsx";
 
 function App() {
   const { authUser } = useAuthContext();
@@ -56,6 +57,7 @@ function App() {
           <Route path="/vlogs" element={<AllVlogs />} />
           <Route path="/vlog/create" element={<CreateVlog />} />
           <Route path="/jokes" element={<Jokes />} />
+          <Route path="/news" element={<NewsPage />} />
         </Routes>
       </main>
       <Footer />
